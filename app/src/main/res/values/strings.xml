@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HeatBeat</string>
+    <string name="message"> Bradycardia is detected</string>
 </resources>
