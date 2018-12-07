@@ -137,17 +137,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void LoadFile(String fileName) throws IOException {
-        //Create a InputStream to read the file int
-        //get the resource id from the file name
-
-//        int rID = resources.getIdentifier("com.assignment.mc.heatbeat:raw/" + fileName, null, null);
-        //get the file as a stream
         Log.d("MainActivity", fileName);
-//        AssetFileDescriptor descriptor = getAssets().openFd(fileName);
-//        FileReader reader = new FileReader(descriptor.getFileDescriptor());
-
         BufferedReader reader = new BufferedReader(new InputStreamReader(context.getAssets().open(fileName + ".txt")));
-//        reader = new BufferedReader(new InputStreamReader(Freader));
         String line = reader.readLine();
         while (line != null) {
             demoData.add(Float.valueOf(line));
